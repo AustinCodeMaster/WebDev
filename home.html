@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="shortcut icon" href="/images/FAVICON.jpeg">
     <title>Home</title>
@@ -19,10 +18,7 @@
                     <li><a href="home.html" class="logout-btn">LOG OUT</a></li>
                 </ul>
             </div>
-        </nav>
-        <div class="text-box">
-            <h2 class="welcome-message">Welcome, Austin!</h2>
-            <div class="search-container">
+        </nav>        <div class="text-box">            <h2 class="welcome-message">Welcome, Austin!</h2>            <div class="search-container">
                 <input type="text" placeholder="Search items..." class="search-input">
                 <select class="category-select">
                     <option value="">All Categories</option>
@@ -33,8 +29,63 @@
                     <option value="other">Other</option>
                 </select>
                 <button class="search-btn">Search</button>
-            </div>            <h1>Lost & Found Items</h1>
-            <p>Find what you've lost and browse through found items</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lost Items Section -->
+    <section class="items-section">
+        <div class="container">
+            <h2>Lost Items</h2>
+            <div class="items-grid">
+                <!-- Sample Lost Item Cards -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="images/phone.jpg" alt="Lost Phone">
+                        <span class="status">Lost</span>
+                    </div>
+                    <div class="item-info">
+                        <h3>iPhone 13 Pro</h3>
+                        <p class="category">Electronics</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Westlands, Nairobi</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> Lost on: June 10, 2025</p>
+                        <p class="description">Black iPhone 13 Pro with clear case. Lost near Westlands Mall.</p>
+                        <button class="contact-btn">Contact Owner</button>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="images/wallet.jpg" alt="Lost Wallet">
+                        <span class="status">Lost</span>
+                    </div>
+                    <div class="item-info">
+                        <h3>Brown Leather Wallet</h3>
+                        <p class="category">Accessories</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> CBD, Nairobi</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> Lost on: June 9, 2025</p>
+                        <p class="description">Brown leather wallet containing ID and credit cards.</p>
+                        <button class="contact-btn">Contact Owner</button>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="images/laptop.jpg" alt="Lost Laptop">
+                        <span class="status">Lost</span>
+                    </div>
+                    <div class="item-info">
+                        <h3>MacBook Pro</h3>
+                        <p class="category">Electronics</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Kilimani, Nairobi</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> Lost on: June 11, 2025</p>
+                        <p class="description">Silver MacBook Pro 14-inch with stickers on the cover.</p>
+                        <button class="contact-btn">Contact Owner</button>
+                    </div>
+                </div>
+            </div>
+            <button class="load-more">Load More Items</button>
+        </div>
         </div>
     </section>
 <!--footer-->    <section class="footer">
