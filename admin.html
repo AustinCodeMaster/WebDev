@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - LoFo</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <div class="nav-links">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="login.html" class="logout-btn">LOG OUT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="text-box">
+      <h2>Admin Dashboard</h2>
+      <p>Manage lost items and claims</p>
+    </div>
+  </section>
+
+  <section class="admin-section">
+    <div class="container">
+      <h3>Lost Items</h3>
+      <button id="addItemBtn">Add New Item</button>
+      <div id="lostItemsList"></div>
+
+      <h3>Claims</h3>
+      <div id="claimsList"></div>
+    </div>
+  </section>
+
+  <!-- Add/Edit Item Modal -->
+  <div id="itemModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h3 id="modalTitle">Add Lost Item</h3>
+      <form id="itemForm">
+        <input type="hidden" id="itemId" />
+        <div>
+          <label>Title:</label>
+          <input type="text" id="itemTitle" required />
+        </div>
+        <div>
+          <label>Category:</label>
+          <select id="itemCategory">
+            <option value="">Select Category</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessories">Accessories</option>
+            <option value="documents">Documents</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label>Location:</label>
+          <input type="text" id="itemLocation" />
+        </div>
+        <div>
+          <label>Date Lost:</label>
+          <input type="date" id="itemDateLost" />
+        </div>
+        <div>
+          <label>Description:</label>
+          <textarea id="itemDescription"></textarea>
+        </div>
+        <div>
+          <label>Image URL:</label>
+          <input type="text" id="itemImageUrl" />
+        </div>
+        <div>
+          <label>Status:</label>
+          <select id="itemStatus">
+            <option value="lost">Lost</option>
+            <option value="claimed">Claimed</option>
+          </select>
+        </div>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
