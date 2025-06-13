@@ -122,4 +122,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize
   loadUser();
   fetchLostItems();
+
+  // Prevent repeated redirects causing flickering
+  let redirecting = false;
+  function safeRedirect(url) {
+    if (!redirecting) {
+      redirecting = true;
+      window.location.href = url;
+    }
+  }
+
+  // Override window.location.href setter to use safeRedirect
+  const originalHref = Object.getOwnPropertyDescriptor(window.location.__proto__, 'href');
+  Object.defineProperty(window.location, 'href', {
+    set: function(url) {
+      safeRedirect(url);
+    },
+    get: function() {
+      return originalHref.get.call(window.location);
+    }
+  });
 });

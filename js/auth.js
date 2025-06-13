@@ -1,9 +1,12 @@
 // Check if user is logged in
 function checkAuth() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-    if (!isLoggedIn && !window.location.href.includes('index.html')) {
-        window.location.href = 'index.html';
-    } else if (isLoggedIn && window.location.href.includes('index.html')) {
+    const user = localStorage.getItem('lofoUser');
+    const publicPages = ['login.html', 'register.html', 'about.html', 'contact.html'];
+    const currentPage = window.location.pathname.split('/').pop();
+
+    if (!user && !publicPages.includes(currentPage)) {
+        window.location.href = 'login.html';
+    } else if (user && currentPage === 'login.html') {
         window.location.href = 'home.html';
     }
 }
@@ -12,7 +15,7 @@ function checkAuth() {
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('username');
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
 }
 
 // Add welcome message

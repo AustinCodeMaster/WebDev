@@ -677,3 +677,20 @@ nav {
         font-size: 1.8rem;
     }
 }
+
+/* Claim Button */
+.contact-btn {
+    background: #b8a1ff;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    font-weight: 600;
+}
+
+.contact-btn:hover {
+    background: #7c5fe6;
+}

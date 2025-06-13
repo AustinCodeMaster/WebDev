@@ -30,9 +30,10 @@ pool.getConnection((err, connection) => {
   }
 });
 
-// Basic route
+// Basic route serving login.html as landing page
+const path = require('path');
 app.get('/', (req, res) => {
-  res.send('LoFo Lost and Found API is running');
+  res.sendFile(path.join(__dirname, '../home.html'));
 });
 
 // User login endpoint

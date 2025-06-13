@@ -1,0 +1,299 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f9fafb;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #4a3aff;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    background-color: #6c5ce7;
+    color: #fff;
+}
+
+.logout-btn {
+    background-color: #ff7675;
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d63031;
+    text-decoration: none;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(rgba(74,58,255,0.85), rgba(74,58,255,0.7)), url('/images/header-bg.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.text-box h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.text-box p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+/* Admin Section */
+.admin-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    min-height: 60vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.admin-section h3 {
+    font-size: 1.8rem;
+    color: #4a3aff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    border-bottom: 3px solid #4a3aff;
+    padding-bottom: 8px;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #4a3aff;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button:hover, .btn:hover {
+    background-color: #6c5ce7;
+}
+
+/* Lost Items and Claims List */
+#lostItemsList, #claimsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Admin Item Card */
+.admin-item, .admin-claim {
+    background-color: #f7f8fc;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(74, 58, 255, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.admin-item:hover, .admin-claim:hover {
+    box-shadow: 0 4px 12px rgba(74, 58, 255, 0.2);
+}
+
+.admin-item h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.admin-item p, .admin-claim p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Action Buttons */
+.edit-btn, .delete-btn, .approve-btn, .reject-btn {
+    background-color: #4a3aff;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn, .reject-btn {
+    background-color: #ff6b6b;
+}
+
+.edit-btn:hover, .approve-btn:hover {
+    background-color: #6c5ce7;
+}
+
+.delete-btn:hover, .reject-btn:hover {
+    background-color: #d63031;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #4a3aff;
+}
+
+/* Form Styles */
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #4a3aff;
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links ul {
+        gap: 20px;
+    }
+
+    .header {
+        height: 40vh;
+        padding: 0 10px;
+    }
+
+    .text-box h2 {
+        font-size: 2rem;
+    }
+
+    .admin-section {
+        padding: 20px 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+
+    .admin-item, .admin-claim {
+        padding: 12px 15px;
+    }
+}
