@@ -30,19 +30,8 @@ A web-based lost and found platform that helps people find their lost items. Thi
 
 ## Project Structure
 
-### Traditional Frontend
-- `frontend/` - Traditional HTML/CSS/JS implementation
-  - `home.html` - Main page with search functionality
-  - `about.html` - Information about LoFo platform
-  - `contact.html` - Contact form and information
-  - `login.html` - User authentication page
-  - `admin.html` - Administrative dashboard
-  - `css/` - Stylesheets for all pages
-  - `js/` - JavaScript functionality
-  - `images/` - Project images and assets
-
-### React Frontend
-- `frontend-react/` - Modern React implementation
+### Frontend
+- `frontend-react/` - React implementation
   - `src/` - Source code
     - `components/` - React components
       - `layout/` - Header, Footer, and Layout components
@@ -61,7 +50,7 @@ A web-based lost and found platform that helps people find their lost items. Thi
 
 ## Getting Started
 
-### Running the React Frontend
+### Running the Frontend
 ```
 cd frontend-react
 npm install
