@@ -1,0 +1,207 @@
+/* Home Page Styles */
+/* Search controls */
+.search-controls {
+  width: 90%;
+  color: white;
+  margin: -100px auto 20px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.welcome-message {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.category-select {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.search-btn {
+  padding: 12px 25px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #e53935;
+}
+
+.lost-found-header {
+  margin-top: 30px;
+}
+
+.lost-found-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.lost-found-sub {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Items section */
+.items-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.items-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 28px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.item-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.item-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.item-card:hover .item-image img {
+  transform: scale(1.05);
+}
+
+.item-details {
+  padding: 20px;
+}
+
+.item-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.item-category,
+.item-location,
+.item-date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.item-category i,
+.item-location i,
+.item-date i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+  color: #f44336;
+}
+
+.item-status {
+  margin-top: 15px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-lost {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.status-found {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-claimed {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-verified {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.no-items {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px 0;
+  color: #777;
+  font-size: 18px;
+}
+
+.loading i {
+  margin-right: 10px;
+  color: #f44336;
+}
